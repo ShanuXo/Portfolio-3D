@@ -17,6 +17,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -31,41 +32,74 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby6LO1D0Fnhfrh1aAGEtULfW6OsXU-WZr9CRK6JEsHnvTbPcilUks687hqI3vz4vrp3/exec';
+    const formData = new FormData();
+    formData.append('Name', form.name);
+    formData.append('Email', form.email);
+    formData.append('Message', form.message);
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        setLoading(false);
+        setSubmissionStatus("success"); 
+
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+        const timeoutId = setTimeout(() => {
+          setSubmissionStatus(null);
+        }, 5000);
+
+        // Clear the timeout if component unmounts or a new submission status message is set
+        return () => clearTimeout(timeoutId);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setLoading(false);
+        setSubmissionStatus("error");
+      });
     // template_yhs05ch-template id
     // service_ztwtdvh-service id
     // 5KMQ7ivq9QXfS0fJb-public key
 
-    emailjs
-      .send(
-        'service_ztwtdvh',
-        'template_yhs05ch',
-        {
-          from_name: form.name,
-          to_name: "Shanu Kumar",
-          from_email: form.email,
-          to_email: "shanusah8001@gmail.com",
-          message: form.message,
-        },
-        'zJsaoiVyPk0C55OSf'
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+    // emailjs
+    //   .send(
+    //     'service_ztwtdvh',
+    //     'template_yhs05ch',
+    //     {
+    //       from_name: form.name,
+    //       to_name: "Shanu Kumar",
+    //       from_email: form.email,
+    //       to_email: "shanusah8001@gmail.com",
+    //       message: form.message,
+    //     },
+    //     // 'zJsaoiVyPk0C55OSf'
+    //     '111013435506-8uti8qdv6rqmk8gk1arrj3nm5oo4dvkt.apps.googleusercontent.com',
+        
+    //   )
+    //   .then(
+    //     () => {
+    //       setLoading(false);
+    //       alert("Thank you. I will get back to you as soon as possible.");
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+    //       setForm({
+    //         name: "",
+    //         email: "",
+    //         message: "",
+    //       });
+    //     },
+    //     (error) => {
+    //       setLoading(false);
+    //       console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+    //       alert("Ahh, something went wrong. Please try again.");
+    //     }
+    //   );
   };
 
   return (
@@ -77,7 +111,11 @@ const Contact = () => {
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={styles.sectionSubText}>
+          <h3 >Email : shanusah8001@gmail.com</h3>
+          <h3 >Phone No. : +91-9304641125</h3>
+        </p>
+        {/* <h3 className={styles.sectionHeadText}>Contact.</h3> */}
 
         <form
           ref={formRef}
@@ -102,7 +140,7 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="What's your Email address?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -125,6 +163,12 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+        {submissionStatus === "success" && (
+        <p className="text-green-500 mt-4">Thank you,Your message has been received,I will make it a priority to respond to your inquiry.</p>
+      )}
+      {submissionStatus === "error" && (
+        <p className="text-red-500 mt-4">Ahh, something went wrong. Please try again.</p>
+      )}
       </motion.div>
 
       <motion.div

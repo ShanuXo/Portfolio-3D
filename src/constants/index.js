@@ -24,8 +24,17 @@ import {
     tripguide,
     threejs,
 } from "../assets";
+import globallogic from "../assets/company/globallogic.png";
+import netflix from "../assets/socialmedia/NetFlix12.png";
+import emailgenerator from "../assets/socialmedia/EmailGenerator.png";
+import dotnet from "../assets/socialmedia/.net.png";
+import firebase from "../assets/socialmedia/firebase.png";
 
 export const navLinks = [
+    {
+        id: "home",
+        title: "Home",
+    },
     {
         id: "about",
         title: "About",
@@ -38,19 +47,20 @@ export const navLinks = [
         id: "contact",
         title: "Contact",
     },
+
 ];
 
 const services = [
     {
-        title: "Web Developer",
+        title: "Full Stack Developer",
         icon: web,
     },
     {
-        title: "React Native Developer",
+        title: "Backend Developer",
         icon: mobile,
     },
     {
-        title: "Backend Developer",
+        title: "Database Developer",
         icon: backend,
     },
     {
@@ -97,16 +107,16 @@ const technologies = [
         icon: mongodb,
     },
     {
-        name: "Three JS",
-        icon: threejs,
+        name: ".NET",
+        icon: dotnet,
     },
     {
         name: "git",
         icon: git,
     },
     {
-        name: "figma",
-        icon: figma,
+        name: "Firebase",
+        icon: firebase,
     },
     {
         name: "docker",
@@ -116,82 +126,82 @@ const technologies = [
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Full Stack Developer",
+        company_name: "GlobalLogic",
+        icon: globallogic,
         iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        date: "Febuary 2023 - June 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Developing and maintaining web applications using React.js and .NET .",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
+            "Implementing API with responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Software Engineer",
+        company_name: "GlobalLogic",
+        icon: globallogic,
         iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        date: "Sep 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Developing and maintaining web applications using React.js, .NET, SQL,Docker.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
+            "Implementing and Creating API's and responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+    // {
+    //     title: "Web Developer",
+    //     company_name: "Shopify",
+    //     icon: shopify,
+    //     iconBg: "#383E56",
+    //     date: "Jan 2022 - Jan 2023",
+    //     points: [
+    //         "Developing and maintaining web applications using React.js and other related technologies.",
+    //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //         "Implementing responsive design and ensuring cross-browser compatibility.",
+    //         "Participating in code reviews and providing constructive feedback to other developers.",
+    //     ],
+    // },
+    // {
+    //     title: "Full stack Developer",
+    //     company_name: "Meta",
+    //     icon: meta,
+    //     iconBg: "#E6DEDD",
+    //     date: "Jan 2023 - Present",
+    //     points: [
+    //         "Developing and maintaining web applications using React.js and other related technologies.",
+    //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //         "Implementing responsive design and ensuring cross-browser compatibility.",
+    //         "Participating in code reviews and providing constructive feedback to other developers.",
+    //     ],
+    // },
 ];
 
 const testimonials = [
     {
         testimonial:
             "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-        name: "Sara Lee",
-        designation: "CFO",
-        company: "Acme Co",
+        name: "Siddhant Kashyap",
+        designation: "SWE",
+        company: "GlobalLogic",
         image: "https://randomuser.me/api/portraits/women/4.jpg",
     },
     {
         testimonial:
             "I've never met a web developer who truly cares about their clients' success like Rick does.",
-        name: "Chris Brown",
-        designation: "COO",
-        company: "DEF Corp",
+        name: "ChiragRaju S",
+        designation: "SWE",
+        company: "Globallogic",
         image: "https://randomuser.me/api/portraits/men/5.jpg",
     },
     {
         testimonial:
             "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-        name: "Lisa Wang",
-        designation: "CTO",
-        company: "456 Enterprises",
+        name: "Ujjawal jain",
+        designation: "SDE",
+        company: "Oracle",
         image: "https://randomuser.me/api/portraits/women/6.jpg",
     },
 ];
@@ -219,46 +229,50 @@ const projects = [
         source_code_link: "https://github.com/",
     },
     {
-        name: "Job IT",
+        name: "Netflix",
         description:
             "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
         tags: [
             {
-                name: "react",
+                name: "reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: ".NET",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "mongoDB",
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: netflix,
+        source_code_link: "https://github.com/ShanuXo/Netflix-Clone",
     },
     {
-        name: "Trip Guide",
+        name: "OpenAI-Email-Generator",
         description:
             "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
         tags: [
             {
-                name: "nextjs",
+                name: "reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "node",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "express",
+                color: "green-text-gradient",
+            },
+            {
+                name: "openai-API",
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: emailgenerator,
+        source_code_link: "https://github.com/ShanuXo/OpenAI-SQL-Generator",
     },
 ];
 

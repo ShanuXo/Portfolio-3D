@@ -30,6 +30,12 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import leetcodeIcon from "./socialmedia/leetcodeIcon.png";
+// import instagramIcon from "./socialmedia/instagramIcon.png";
+import githubIcon from "./socialmedia/github.png";
+import linkedinIcon from "./socialmedia/linkedinIcon.png";
+import downloadIcon from "./socialmedia/downloadIcon.png";
+
 
 export {
   logo,
@@ -61,4 +67,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  leetcodeIcon,
+  // instagramIcon,
+  linkedinIcon,
+  githubIcon,
+  downloadIcon,
 };
