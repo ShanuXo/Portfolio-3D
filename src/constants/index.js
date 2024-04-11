@@ -24,12 +24,13 @@ import {
     tripguide,
     threejs,
 } from "../assets";
+
 import globallogic from "../assets/company/globallogic.png";
 import netflix from "../assets/socialmedia/NetFlix12.png";
 import emailgenerator from "../assets/socialmedia/EmailGenerator.png";
-import dotnet from "../assets/socialmedia/.net.png";
+import dotnet from "../assets/socialmedia/net.png";
 import firebase from "../assets/socialmedia/firebase.png";
-
+import ShanuPDF from "../Pdf/Shanu.pdf"
 export const navLinks = [
     {
         id: "home",
@@ -47,7 +48,36 @@ export const navLinks = [
         id: "contact",
         title: "Contact",
     },
-
+    {
+        id: "linkedin",
+        title: "LinkedIn",
+        url: "https://www.linkedin.com/in/shanu-kumar-95b644214/",
+        // icon: linkedinIcon,
+    },
+    {
+        id: "github",
+        title: "GitHub",
+        url: "https://github.com/ShanuXo",
+        // icon: githubIcon,
+    },
+    {
+        id: "leetcode",
+        title: "Leetcode",
+        url: "https://leetcode.com/shanusah8001/",
+        // icon: leetcodeIcon,
+    },
+    {
+        id: "twitter",
+        title: "Twitter/X",
+        url: "https://twitter.com/ShanuXo_",
+        // icon: twitterIcon,
+    },
+    {
+        id: "downloadCV",
+        title: "Download CV",
+        url: ShanuPDF,
+        // icon: "downloadCV",
+    },
 ];
 
 const services = [
