@@ -31,6 +31,9 @@ import emailgenerator from "../assets/socialmedia/EmailGenerator.png";
 import dotnet from "../assets/socialmedia/net.png";
 import firebase from "../assets/socialmedia/firebase.png";
 import ShanuPDF from "../Pdf/Shanu.pdf"
+import apple from "../assets/socialmedia/apple.jpg";
+import Stackoverflow from "../assets/socialmedia/Stackoverflow.png"
+import TreeLink from "../assets/socialmedia/TreeLink.png"
 export const navLinks = [
     {
         id: "home",
@@ -63,7 +66,7 @@ export const navLinks = [
     {
         id: "leetcode",
         title: "Leetcode",
-        url: "https://leetcode.com/shanusah8001/",
+        url: "https://leetcode.com/u/ShanuXo/",
         // icon: leetcodeIcon,
     },
     {
@@ -156,57 +159,30 @@ const technologies = [
 
 const experiences = [
     {
-        title: "Full Stack Developer",
+        title: "Software Engineer",
         company_name: "GlobalLogic",
         icon: globallogic,
         iconBg: "#383E56",
-        date: "Febuary 2023 - June 2023",
+        date: "September 2023",
         points: [
-            "Developing and maintaining web applications using React.js and .NET .",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing API with responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Engineered a board management solution for Diligent, a modern governance company that simplifies governance with comprehensive    oftware tools, Improve agenda management and policy publishing by 60%, providing a streamlined experience for users.",
+            "Designed, coded, feature empowering local governing bodies across the USA, and Canada. This feature enables seamless employee punch-ins and efficient access to meetings, increasing policy adoption by 50%.",
+            "Worked on migrating the product infrastructure from Azure to AWS,taking responsibility for creating S3 buckets and setting up a local-facing database to improve data accessibility for all users. This migration enhanced application scalability, allowing for more seamless handling of user growth and increased traffic.",
+            "• Technology Used: .NET,React.js, Redux, Material-UI, MongoDB,Microsoft SQL Server, AWS (S3), GIT",
         ],
     },
     {
-        title: "Software Engineer",
+        title: "Trainee Software Engineer",
         company_name: "GlobalLogic",
         icon: globallogic,
         iconBg: "#E6DEDD",
         date: "Sep 2023",
         points: [
-            "Developing and maintaining web applications using React.js, .NET, SQL,Docker.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "Trained in core technologies including .NET, React.js, and Microsoft SQL Server, and applied this knowledge on internal,industry-level projects.",
             "Implementing and Creating API's and responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Collaborated on milestone projects, gaining practical experience in full-stack development using .NET and React.js.",
         ],
     },
-    // {
-    //     title: "Web Developer",
-    //     company_name: "Shopify",
-    //     icon: shopify,
-    //     iconBg: "#383E56",
-    //     date: "Jan 2022 - Jan 2023",
-    //     points: [
-    //         "Developing and maintaining web applications using React.js and other related technologies.",
-    //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-    //         "Implementing responsive design and ensuring cross-browser compatibility.",
-    //         "Participating in code reviews and providing constructive feedback to other developers.",
-    //     ],
-    // },
-    // {
-    //     title: "Full stack Developer",
-    //     company_name: "Meta",
-    //     icon: meta,
-    //     iconBg: "#E6DEDD",
-    //     date: "Jan 2023 - Present",
-    //     points: [
-    //         "Developing and maintaining web applications using React.js and other related technologies.",
-    //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-    //         "Implementing responsive design and ensuring cross-browser compatibility.",
-    //         "Participating in code reviews and providing constructive feedback to other developers.",
-    //     ],
-    // },
 ];
 
 const testimonials = [
@@ -280,29 +256,67 @@ const projects = [
         source_code_link: "https://github.com/ShanuXo/Netflix-Clone",
     },
     {
-        name: "OpenAI-Email-Generator",
+        name: "Apple Store",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "Developed a Single Page Application to showcase the new Apple product launch using React.js, Tailwind CSS, GSAP, and Three.js.",
         tags: [
             {
                 name: "reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "node",
+                name: "GSAP",
                 color: "green-text-gradient",
             },
             {
-                name: "express",
-                color: "green-text-gradient",
-            },
-            {
-                name: "openai-API",
+                name: "Tailwind CSS",
                 color: "pink-text-gradient",
             },
         ],
-        image: emailgenerator,
-        source_code_link: "https://github.com/ShanuXo/OpenAI-SQL-Generator",
+        image: apple,
+        source_code_link: "https://applexo.netlify.app/",        
+    },
+    {
+        name: "Stack Overflow",
+        description:
+            " Developed a full-stack StackOverflow Clone using the MERN stack (MongoDB, Express.js, React, Node.js) with Redux for state management. This project is an essential build for beginner developers to learn full-stack development.",
+        tags: [
+            {
+                name: "reactjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Node",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Redux",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "mongoDB",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: Stackoverflow,
+        source_code_link: "https://github.com/ShanuXo/Netflix-Clone",
+    },
+    {
+        name: "Tree Link of All Profile",
+        description:
+            "Onelink is an experimental link-in-bio tool, where the data lives in the URL.",
+        tags: [
+            {
+                name: "reactjs and VUEjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "node",
+                color: "green-text-gradient",
+            }
+        ],
+        image: TreeLink,
+        source_code_link: "https://linktreexo.netlify.app/",
     },
 ];
 

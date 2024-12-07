@@ -33,7 +33,8 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycby6LO1D0Fnhfrh1aAGEtULfW6OsXU-WZr9CRK6JEsHnvTbPcilUks687hqI3vz4vrp3/exec';
+    //const scriptURL = 'https://script.google.com/macros/s/AKfycby6LO1D0Fnhfrh1aAGEtULfW6OsXU-WZr9CRK6JEsHnvTbPcilUks687hqI3vz4vrp3/exec';
+    const scriptURL = "https://script.google.com/macros/s/AKfycbw1MBMDLXWHdpqbyzFtQFSj31m2AwQO6Mc-pAJLOBHOUkIkvKaH9PS4dStq2tDM3eVe/exec";
     const formData = new FormData();
     formData.append('Name', form.name);
     formData.append('Email', form.email);
